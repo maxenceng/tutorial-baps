@@ -12,11 +12,12 @@ As they can change with each patch, with talents being updated, added or removed
 Here are the defined requirements:
 1. Classes:
     1. A class must have:
-        1. a name
-        2. a description
-        3. a list of talents
-        4. a list of spells
-        5. a list of specializations
+        1. an ID
+        2. a name
+        3. a description
+        4. a list of talents
+        5. a list of spells
+        6. a list of specializations
     2. You can:
         1. get all classes
         2. get one class
@@ -25,10 +26,11 @@ Here are the defined requirements:
         5. delete one
 2. Specialization:
     1. A spec must have:
-        1. a name
-        2. a description
-        3. a list of talents
-        4. a list of spells
+        1. an ID
+        2. a name
+        3. a description
+        4. a list of talents
+        5. a list of spells
     2. You can:
         1. get all classes
         2. get one class
@@ -46,7 +48,7 @@ Here are the defined requirements:
         7. a cooldown
         8. if they provide a spell
         9. if it's a class talent or a spec talent
-        10. their children's ID
+        10. their children (Not displayed in step 2)
     2. Same as for classes and specs:
         1. you can get all
         2. get one
@@ -59,16 +61,17 @@ Here are the defined requirements:
         3. if it's a class talent or a spec talent
 4. Spells:
     1. A spell must have:
-        1. a name
-        2. a description
-        3. the damage provided
-        4. the healing provided
-        5. the shielding provided
-        6. a cooldown
-        7. if they are activated or deactivated by default (meaning it is dependent on a talent being activated)
-        8. if they are a passive or not
+       1. an ID
+       2. a name
+       3. a description
+       4. the damage provided
+       5. the healing provided
+       6. the shielding provided
+       7. a cooldown
+       8. if they are activated or deactivated by default (meaning it is dependent on a talent being activated)
+       9. if they are a passive or not
     2. Same as the others you get the gist
-5. The talent tree:
+5. The talent tree (only in Step 2):
     1. Construct the two talent trees, one for the class and one for the spec
     2. No UI is required, only that a talent tree leads to parent(s) talents and their children.
     3. Don't do the talent switches like there is in retail, it adds unneeded complexity.
