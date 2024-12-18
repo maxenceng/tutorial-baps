@@ -6,7 +6,7 @@ public class Spell {
     private final String name;
 
     private Spell(SpellBuilder builder) {
-        Assert.notBlank(builder.name, "Name must not be blank");
+        Assert.notBlank(builder.name, "Name must not be blank"); // C'est faux, c'est pas comme ça Assert
         this.name = builder.name;
         /**
          * FIXME
