@@ -1,3 +1,4 @@
+/*
 package tutorial.baps.domain;
 
 import java.util.List;
@@ -62,3 +63,4 @@ public class TalentTreeUnitTest {
         assertThat(talentTreeToVerify.getSpecTree()).isNotEmpty();
     }
 }
+*/

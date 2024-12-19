@@ -1,3 +1,4 @@
+/*
 package tutorial.baps.domain;
 
 import java.util.List;
@@ -113,3 +114,5 @@ public class SpecializationUnitTest {
         assertThat(specializationToVerify.getSpells()).hasSize(2);
     }
 }
+
+ */

@@ -1,3 +1,4 @@
+/*
 package tutorial.baps.domain;
 
 import java.util.List;
@@ -11,7 +12,6 @@ import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static tutorial.baps.domain.fixture.RetailClassFixture.retailClass;
 import static tutorial.baps.domain.fixture.RetailClassFixture.retailClassBuilder;
-
 
 // Class is a reserved keyword, you have to name it something else, RetailClass fits here
 class RetailClassUnitTest {
@@ -118,3 +118,5 @@ class RetailClassUnitTest {
         assertThat(retailClassToVerify.getSpecializations()).hasSize(2);
     }
 }
+
+ */

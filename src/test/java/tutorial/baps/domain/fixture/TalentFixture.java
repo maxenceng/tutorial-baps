@@ -1,3 +1,4 @@
+
 package tutorial.baps.domain.fixture;
 
 import java.util.List;
@@ -12,8 +13,7 @@ public final class TalentFixture {
                 .id(1L)
                 .name("talentName")
                 .description("talentDescription")
-                // FIXME: Create an enum for this
-                .type(TalentType.CLASS);
+                .type(Talent.TalentType.CLASS);
     }
 
     public static Talent talentMinimal() {
@@ -29,7 +29,7 @@ public final class TalentFixture {
                 .spell(spell())
                 .children(List.of(
                         talentMinimal(),
-                        talentBuilder().id(2L).build()));
+                        talentMinimalBuilder().id(2L).build()));
     }
 
     public static Talent talent() {

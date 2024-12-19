@@ -11,7 +11,7 @@ public class DummyDataService {
 
     public DummyDataService() {
     }
-
+/*
     public List<Spell> generateSpells() {
         return IntStream.range(0, 10)
                 .mapToObj(i -> generateSpell())
@@ -31,7 +31,7 @@ public class DummyDataService {
                 .cooldown(RandomUtils.secure().randomLong())
                 .build();
     }
-
+/*
     public List<Talent> generateTalents() {
         return IntStream.range(0, 10)
                 .mapToObj(i -> generateTalent())
@@ -97,4 +97,6 @@ public class DummyDataService {
                 .specializations(generateSpecializations())
                 .build();
     }
+
+ */
 }

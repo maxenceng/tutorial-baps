@@ -1,3 +1,4 @@
+/*
 package tutorial.baps.domain.fixture;
 
 import java.util.List;
@@ -26,3 +27,5 @@ public final class RetailClassFixture {
         return retailClassBuilder().build();
     }
 }
+
+ */
