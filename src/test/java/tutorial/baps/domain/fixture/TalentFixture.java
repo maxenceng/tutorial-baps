@@ -4,6 +4,7 @@ package tutorial.baps.domain.fixture;
 import java.util.List;
 import tutorial.baps.domain.Talent;
 import tutorial.baps.domain.Talent.TalentBuilder;
+import tutorial.baps.domain.TalentType;
 
 import static tutorial.baps.domain.fixture.SpellFixture.spell;
 
@@ -13,7 +14,7 @@ public final class TalentFixture {
                 .id(1L)
                 .name("talentName")
                 .description("talentDescription")
-                .type(Talent.TalentType.CLASS);
+                .type(TalentType.CLASS);
     }
 
     public static Talent talentMinimal() {

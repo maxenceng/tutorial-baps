@@ -16,11 +16,7 @@ public class Talent {
     private final Long cooldown;
     private final Spell spell;
     private final TalentType type;
-    public enum TalentType {
-        CLASS,
-        SPEC
-    }
-    private final List children;
+    private final List<Talent> children;
 
     private Talent(TalentBuilder builder) {
 
@@ -50,7 +46,7 @@ public class Talent {
     public Long getCooldown() { return cooldown; }
     public Spell getSpell() { return spell; }
     public TalentType getType() { return type; }
-    public List getChildren() { return children; }
+    public List<Talent> getChildren() { return children; }
 
     public static TalentBuilder builder() {
         return new TalentBuilder();
@@ -67,7 +63,7 @@ public class Talent {
         private Long cooldown;
         private Spell spell;
         private TalentType type;
-        private List children = new ArrayList(9);
+        private List<Talent> children = new ArrayList<>();
 
         public TalentBuilder() {}
 
@@ -107,7 +103,7 @@ public class Talent {
             this.type = type;
             return this;
         }
-        public TalentBuilder children(List children) {
+        public TalentBuilder children(List<Talent> children) {
             this.children = children;
             return this;
         }
