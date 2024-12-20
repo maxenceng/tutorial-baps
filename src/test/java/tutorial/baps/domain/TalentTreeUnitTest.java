@@ -1,4 +1,3 @@
-/*
 package tutorial.baps.domain;
 
 import java.util.List;
@@ -32,7 +31,7 @@ public class TalentTreeUnitTest {
 
     @DisplayName("Should build if classTree is not empty")
     @Test
-    void shouldBuildIfClassTreeIsNotEmpty() {
+    void shouldBuildIfSpecTreeIsNotEmpty() {
         assertThatCode(() -> talentTreeBuilder()
                 .specTree(List.of())
                 .build()).doesNotThrowAnyException();
@@ -63,4 +62,3 @@ public class TalentTreeUnitTest {
         assertThat(talentTreeToVerify.getSpecTree()).isNotEmpty();
     }
 }
-*/

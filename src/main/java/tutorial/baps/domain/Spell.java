@@ -15,6 +15,7 @@ public class Spell {
     private final Boolean passive;
 
     private Spell(SpellBuilder builder) {
+
         Assert.notNull("Id", builder.id);
         Assert.notBlank("Name", builder.name);
         Assert.notBlank("Description", builder.description);
@@ -46,6 +47,7 @@ public class Spell {
     }
 
     public static class SpellBuilder {
+
         private Long id;
         private String name;
         private String description;

@@ -1,4 +1,3 @@
-/*
 package tutorial.baps.domain;
 
 import java.util.List;
@@ -35,7 +34,7 @@ class RetailClassUnitTest {
     @DisplayName("should throw MissingMandatoryValueException if name is blank")
     @Test
     void shouldThrowMissingMandatoryValueExceptionIfNameIsBlank() {
-        assertThatThrownBy(() -> RetailClassBuilder()
+        assertThatThrownBy(() -> retailClassBuilder()
                 .name("")
                 .build())
                 .isExactlyInstanceOf(MissingMandatoryValueException.class);
@@ -44,7 +43,7 @@ class RetailClassUnitTest {
     @DisplayName("should throw MissingMandatoryValueException if description is null")
     @Test
     void shouldThrowMissingMandatoryValueExceptionIfDescriptionIsNull() {
-        assertThatThrownBy(() -> RetailClassBuilder()
+        assertThatThrownBy(() -> retailClassBuilder()
                 .description(null)
                 .build())
                 .isExactlyInstanceOf(MissingMandatoryValueException.class);
@@ -53,7 +52,7 @@ class RetailClassUnitTest {
     @DisplayName("should throw MissingMandatoryValueException if description is blank")
     @Test
     void shouldThrowMissingMandatoryValueExceptionIfDescriptionIsBlank() {
-        assertThatThrownBy(() -> RetailClassBuilder()
+        assertThatThrownBy(() -> retailClassBuilder()
                 .description("")
                 .build())
                 .isExactlyInstanceOf(MissingMandatoryValueException.class);
@@ -62,7 +61,7 @@ class RetailClassUnitTest {
     @DisplayName("should throw MissingMandatoryValueException if talents is null")
     @Test
     void shouldThrowMissingMandatoryValueExceptionIfTalentsIsNull() {
-        assertThatThrownBy(() -> RetailClassBuilder()
+        assertThatThrownBy(() -> retailClassBuilder()
                 .talents(null)
                 .build())
                 .isExactlyInstanceOf(MissingMandatoryValueException.class);
@@ -71,7 +70,7 @@ class RetailClassUnitTest {
     @DisplayName("should throw MissingMandatoryValueException if talents is empty")
     @Test
     void shouldThrowMissingMandatoryValueExceptionIfTalentsIsEmpty() {
-        assertThatThrownBy(() -> RetailClassBuilder()
+        assertThatThrownBy(() -> retailClassBuilder()
                 .talents(List.of())
                 .build())
                 .isExactlyInstanceOf(MissingMandatoryValueException.class);
@@ -80,7 +79,7 @@ class RetailClassUnitTest {
     @DisplayName("should throw MissingMandatoryValueException if spells is null")
     @Test
     void shouldThrowMissingMandatoryValueExceptionIfSpellsIsNull() {
-        assertThatThrownBy(() -> RetailClassBuilder()
+        assertThatThrownBy(() -> retailClassBuilder()
                 .spells(null)
                 .build())
                 .isExactlyInstanceOf(MissingMandatoryValueException.class);
@@ -89,7 +88,7 @@ class RetailClassUnitTest {
     @DisplayName("should throw MissingMandatoryValueException if spells is empty")
     @Test
     void shouldThrowMissingMandatoryValueExceptionIfSpellsIsEmpty() {
-        assertThatThrownBy(() -> RetailClassBuilder()
+        assertThatThrownBy(() -> retailClassBuilder()
                 .spells(List.of())
                 .build())
                 .isExactlyInstanceOf(MissingMandatoryValueException.class);
@@ -110,13 +109,11 @@ class RetailClassUnitTest {
         assertThat(retailClassToVerify.getId()).isNotEqualTo(0L);
         assertThat(retailClassToVerify.getName()).isNotNull();
         assertThat(retailClassToVerify.getDescription()).isNotNull();
+        assertThat(retailClassToVerify.getSpecializations()).isNotNull();
+        assertThat(retailClassToVerify.getSpecializations()).hasSize(2);
         assertThat(retailClassToVerify.getTalents()).isNotNull();
         assertThat(retailClassToVerify.getTalents()).hasSize(2);
         assertThat(retailClassToVerify.getSpells()).isNotNull();
         assertThat(retailClassToVerify.getSpells()).hasSize(2);
-        assertThat(retailClassToVerify.getSpecializations()).isNotNull();
-        assertThat(retailClassToVerify.getSpecializations()).hasSize(2);
     }
 }
-
- */

@@ -12,16 +12,6 @@ import static tutorial.baps.domain.fixture.SpellFixture.spell;
 import static tutorial.baps.domain.fixture.SpellFixture.spellMinimal;
 import static tutorial.baps.domain.fixture.SpellFixture.spellMinimalBuilder;
 
-/**
- * Instructions:
- * - The class is pretty barebone, it is missing attributes, complete the class
- * - Look at the builder pattern, it helps create objects easily and clearly
- * <p>
- * Spell is the base class that's why we start with this one as the others rely on it to exist, always start with the classes that will be used by the others
- * DisplayName is only provided as a way to have a readable test when starting it, it is in no way mandatory
- * If you click next to a line, you can create a breakpoint. Use it in combination with a right-click > debug to understand what went wrong
- * The assertion package is only there to ensure your domain is safe from invalid values
- */
 public class SpellUnitTest {
     @DisplayName("should throw MissingMandatoryValueException if every attribute is null")
     @Test

@@ -1,7 +1,8 @@
-/*
 package tutorial.baps.domain.fixture;
 
 import java.util.List;
+import tutorial.baps.domain.TalentTree;
+import tutorial.baps.domain.TalentTree.TalentTreeBuilder;
 
 import static tutorial.baps.domain.fixture.TalentFixture.talent;
 
@@ -16,4 +17,3 @@ public final class TalentTreeFixture {
         return talentTreeBuilder().build();
     }
 }
-*/

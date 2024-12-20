@@ -1,4 +1,3 @@
-/*
 package tutorial.baps.domain.fixture;
 
 import java.util.List;
@@ -25,4 +24,3 @@ public final class SpecializationFixture {
     }
 }
 
- */

@@ -1,12 +1,8 @@
 package tutorial.baps.domain.fixture;
 
-
 import tutorial.baps.domain.Spell;
 import tutorial.baps.domain.Spell.SpellBuilder;
 
-/**
- * Fixture are helpers to create mock objects
- */
 public final class SpellFixture {
     public static SpellBuilder spellMinimalBuilder() {
         return Spell.builder()

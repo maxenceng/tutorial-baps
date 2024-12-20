@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 public class Talent {
 
-
     private final Long id;
     private final String name;
     private final String description;

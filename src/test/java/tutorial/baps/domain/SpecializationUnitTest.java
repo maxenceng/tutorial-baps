@@ -1,4 +1,3 @@
-/*
 package tutorial.baps.domain;
 
 import java.util.List;
@@ -7,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import tutorial.baps.assertion.MissingMandatoryValueException;
 import tutorial.baps.domain.fixture.SpecializationFixture;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static tutorial.baps.domain.fixture.SpecializationFixture.specialization;
@@ -114,5 +114,3 @@ public class SpecializationUnitTest {
         assertThat(specializationToVerify.getSpells()).hasSize(2);
     }
 }
-
- */

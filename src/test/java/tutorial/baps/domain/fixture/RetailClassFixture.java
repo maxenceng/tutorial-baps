@@ -1,4 +1,3 @@
-/*
 package tutorial.baps.domain.fixture;
 
 import java.util.List;
@@ -18,14 +17,12 @@ public final class RetailClassFixture {
                 .id(1L)
                 .name("talentName")
                 .description("talentDescription")
+                .specializations(List.of(specialization(), specializationBuilder().id(2L).build()))
                 .talents(List.of(talentMinimal(), talent()))
-                .spells(List.of(spellMinimal(), spell()))
-                .specializations(List.of(specialization(), specializationBuilder().id(2L).build()));
+                .spells(List.of(spellMinimal(), spell()));
     }
 
     public static RetailClass retailClass() {
         return retailClassBuilder().build();
     }
 }
-
- */

@@ -1,4 +1,3 @@
-
 package tutorial.baps.domain;
 
 import org.junit.jupiter.api.DisplayName;
