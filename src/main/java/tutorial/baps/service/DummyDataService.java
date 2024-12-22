@@ -4,14 +4,18 @@ import java.util.List;
 import java.util.stream.IntStream;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.lang3.RandomUtils;
+
 import tutorial.baps.domain.Spell;
+import tutorial.baps.domain.Talent;
+import tutorial.baps.domain.Specialization;
+import tutorial.baps.domain.RetailClass;
 
 // FIXME: Transform into a Spring service in Step 2
 public class DummyDataService {
 
     public DummyDataService() {
     }
-/*
+
     public List<Spell> generateSpells() {
         return IntStream.range(0, 10)
                 .mapToObj(i -> generateSpell())
@@ -27,11 +31,11 @@ public class DummyDataService {
                 .passive(RandomUtils.secure().randomBoolean())
                 .damage(RandomUtils.secure().randomLong())
                 .heal(RandomUtils.secure().randomLong())
-                .heal(RandomUtils.secure().randomLong())
+                .shield(RandomUtils.secure().randomLong())
                 .cooldown(RandomUtils.secure().randomLong())
                 .build();
     }
-/*
+
     public List<Talent> generateTalents() {
         return IntStream.range(0, 10)
                 .mapToObj(i -> generateTalent())
@@ -45,7 +49,7 @@ public class DummyDataService {
                 .description(RandomStringUtils.secure().nextAlphanumeric(10))
                 .damage(RandomUtils.secure().randomLong())
                 .heal(RandomUtils.secure().randomLong())
-                .heal(RandomUtils.secure().randomLong())
+                .shield(RandomUtils.secure().randomLong())
                 .cooldown(RandomUtils.secure().randomLong())
                 .spell(generateSpell())
                 .children(List.of(generateTalentWithoutChildren()))
@@ -57,12 +61,11 @@ public class DummyDataService {
                 .id(RandomUtils.secure().randomLong())
                 .name(RandomStringUtils.secure().nextAlphanumeric(10))
                 .description(RandomStringUtils.secure().nextAlphanumeric(10))
-                .active(RandomUtils.secure().randomBoolean())
-                .passive(RandomUtils.secure().randomBoolean())
                 .damage(RandomUtils.secure().randomLong())
                 .heal(RandomUtils.secure().randomLong())
-                .heal(RandomUtils.secure().randomLong())
+                .shield(RandomUtils.secure().randomLong())
                 .cooldown(RandomUtils.secure().randomLong())
+                .spell(generateSpell())
                 .build();
     }
 
@@ -97,6 +100,4 @@ public class DummyDataService {
                 .specializations(generateSpecializations())
                 .build();
     }
-
- */
 }
