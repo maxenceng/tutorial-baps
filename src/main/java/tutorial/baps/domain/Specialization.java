@@ -1,7 +1,7 @@
 package tutorial.baps.domain;
 
-import tutorial.baps.assertion.Assert;
 import java.util.List;
+import tutorial.baps.assertion.Assert;
 
 public class Specialization {
 
@@ -26,11 +26,25 @@ public class Specialization {
 
     }
 
-    public Long getId() { return id; }
-    public String getName() { return name; }
-    public String getDescription() { return description; }
-    public List<Spell> getSpells() { return spells; }
-    public List<Talent> getTalents() { return talents; }
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public List<Spell> getSpells() {
+        return spells;
+    }
+
+    public List<Talent> getTalents() {
+        return talents;
+    }
 
     public static SpecializationBuilder builder() {
         return new SpecializationBuilder();
@@ -44,28 +58,34 @@ public class Specialization {
         private List<Spell> spells;
         private List<Talent> talents;
 
-        public SpecializationBuilder() {}
+        public SpecializationBuilder() {
+        }
 
         public SpecializationBuilder id(Long id) {
             this.id = id;
             return this;
         }
+
         public SpecializationBuilder name(String name) {
             this.name = name;
             return this;
         }
+
         public SpecializationBuilder description(String description) {
             this.description = description;
             return this;
         }
+
         public SpecializationBuilder spells(List<Spell> spells) {
             this.spells = spells;
             return this;
         }
+
         public SpecializationBuilder talents(List<Talent> talents) {
             this.talents = talents;
             return this;
         }
+
         public Specialization build() {
             return new Specialization(this);
         }

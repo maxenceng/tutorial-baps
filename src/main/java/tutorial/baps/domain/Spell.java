@@ -32,15 +32,41 @@ public class Spell {
         this.passive = builder.passive;
     }
 
-    public Long getId() { return id; }
-    public String getName() { return name; }
-    public String getDescription() { return description; }
-    public Long getDamage() { return damage; }
-    public Long getHeal() { return heal; }
-    public Long getShield() { return shield; }
-    public Long getCooldown() { return cooldown; }
-    public Boolean getActive() { return active; }
-    public Boolean getPassive() { return passive; }
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Long getDamage() {
+        return damage;
+    }
+
+    public Long getHeal() {
+        return heal;
+    }
+
+    public Long getShield() {
+        return shield;
+    }
+
+    public Long getCooldown() {
+        return cooldown;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public Boolean getPassive() {
+        return passive;
+    }
 
     public static SpellBuilder builder() {
         return new SpellBuilder();
@@ -58,40 +84,49 @@ public class Spell {
         private Boolean active;
         private Boolean passive;
 
-        private SpellBuilder() {}
+        private SpellBuilder() {
+        }
 
         public SpellBuilder id(Long id) {
             this.id = id;
             return this;
         }
+
         public SpellBuilder name(String name) {
             this.name = name;
             return this;
         }
+
         public SpellBuilder description(String description) {
             this.description = description;
             return this;
         }
+
         public SpellBuilder damage(Long damage) {
             this.damage = damage;
             return this;
         }
+
         public SpellBuilder heal(Long heal) {
             this.heal = heal;
             return this;
         }
+
         public SpellBuilder shield(Long shield) {
             this.shield = shield;
             return this;
         }
+
         public SpellBuilder cooldown(Long cooldown) {
             this.cooldown = cooldown;
             return this;
         }
+
         public SpellBuilder active(Boolean active) {
             this.active = active;
             return this;
         }
+
         public SpellBuilder passive(Boolean passive) {
             this.passive = passive;
             return this;

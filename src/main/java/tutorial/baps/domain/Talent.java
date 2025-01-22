@@ -1,8 +1,8 @@
 package tutorial.baps.domain;
 
-import tutorial.baps.assertion.Assert;
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
+import tutorial.baps.assertion.Assert;
 
 public class Talent {
 
@@ -36,16 +36,45 @@ public class Talent {
 
     }
 
-    public Long getId() { return id;}
-    public String getName () { return name; }
-    public String getDescription() { return description; }
-    public Long getDamage() { return damage; }
-    public Long getHeal() { return heal; }
-    public Long getShield() { return shield; }
-    public Long getCooldown() { return cooldown; }
-    public Spell getSpell() { return spell; }
-    public TalentType getType() { return type; }
-    public List<Talent> getChildren() { return children; }
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Long getDamage() {
+        return damage;
+    }
+
+    public Long getHeal() {
+        return heal;
+    }
+
+    public Long getShield() {
+        return shield;
+    }
+
+    public Long getCooldown() {
+        return cooldown;
+    }
+
+    public Spell getSpell() {
+        return spell;
+    }
+
+    public TalentType getType() {
+        return type;
+    }
+
+    public List<Talent> getChildren() {
+        return children;
+    }
 
     public static TalentBuilder builder() {
         return new TalentBuilder();
@@ -64,44 +93,54 @@ public class Talent {
         private TalentType type;
         private List<Talent> children = new ArrayList<>();
 
-        public TalentBuilder() {}
+        public TalentBuilder() {
+        }
 
         public TalentBuilder id(Long id) {
             this.id = id;
             return this;
         }
+
         public TalentBuilder name(String name) {
             this.name = name;
             return this;
         }
+
         public TalentBuilder description(String description) {
             this.description = description;
             return this;
         }
+
         public TalentBuilder damage(Long damage) {
             this.damage = damage;
             return this;
         }
+
         public TalentBuilder heal(Long heal) {
             this.heal = heal;
             return this;
         }
+
         public TalentBuilder shield(Long shield) {
             this.shield = shield;
             return this;
         }
+
         public TalentBuilder cooldown(Long cooldown) {
             this.cooldown = cooldown;
             return this;
         }
+
         public TalentBuilder spell(Spell spell) {
             this.spell = spell;
             return this;
         }
+
         public TalentBuilder type(TalentType type) {
             this.type = type;
             return this;
         }
+
         public TalentBuilder children(List<Talent> children) {
             this.children = children;
             return this;

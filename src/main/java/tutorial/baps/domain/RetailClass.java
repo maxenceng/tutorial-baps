@@ -1,7 +1,8 @@
 package tutorial.baps.domain;
 
-import tutorial.baps.assertion.Assert;
 import java.util.List;
+import tutorial.baps.assertion.Assert;
+import tutorial.baps.model.RetailClassEntity;
 
 public class RetailClass {
 
@@ -12,7 +13,7 @@ public class RetailClass {
     private final List<Talent> talents;
     private final List<Spell> spells;
 
-    private RetailClass (RetailClassBuilder builder) {
+    private RetailClass(RetailClassBuilder builder) {
 
         Assert.notNull("Id", builder.id);
         Assert.notBlank("Name", builder.name);
@@ -29,12 +30,29 @@ public class RetailClass {
 
     }
 
-    public Long getId() { return id; }
-    public String getName() { return name; }
-    public String getDescription() { return description; }
-    public List<Specialization> getSpecializations() { return specializations; }
-    public List<Talent> getTalents() { return talents; }
-    public List<Spell> getSpells() { return spells; }
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public List<Specialization> getSpecializations() {
+        return specializations;
+    }
+
+    public List<Talent> getTalents() {
+        return talents;
+    }
+
+    public List<Spell> getSpells() {
+        return spells;
+    }
 
     public static RetailClassBuilder builder() {
         return new RetailClassBuilder();
@@ -49,35 +67,46 @@ public class RetailClass {
         private List<Talent> talents;
         private List<Spell> spells;
 
-        public RetailClassBuilder() {}
+        public RetailClassBuilder() {
+        }
 
         public RetailClassBuilder id(Long id) {
             this.id = id;
             return this;
         }
+
         public RetailClassBuilder name(String name) {
             this.name = name;
             return this;
         }
+
         public RetailClassBuilder description(String description) {
             this.description = description;
             return this;
         }
+
         public RetailClassBuilder specializations(List<Specialization> specializations) {
             this.specializations = specializations;
             return this;
         }
+
         public RetailClassBuilder talents(List<Talent> talents) {
             this.talents = talents;
             return this;
         }
+
         public RetailClassBuilder spells(List<Spell> spells) {
             this.spells = spells;
             return this;
         }
+
         public RetailClass build() {
             return new RetailClass(this);
         }
 
+    }
+
+    public RetailClassEntity toEntity() {
+        RetailClassEntity entity = new RetailClassEntity();
     }
 }
