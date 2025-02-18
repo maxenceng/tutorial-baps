@@ -2,7 +2,6 @@ package tutorial.baps.domain;
 
 import java.util.List;
 import tutorial.baps.assertion.Assert;
-import tutorial.baps.model.RetailClassEntity;
 
 public class RetailClass {
 
@@ -104,9 +103,5 @@ public class RetailClass {
             return new RetailClass(this);
         }
 
-    }
-
-    public RetailClassEntity toEntity() {
-        RetailClassEntity entity = new RetailClassEntity();
     }
 }

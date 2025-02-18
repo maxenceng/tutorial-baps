@@ -10,5 +10,6 @@ public class TalentTreeService {
 
     public TalentTree getTalentTrees(Long classId, Long specId, TalentTreeFilter Filter) {
         // FIXME
+        return null;
     }
 }
